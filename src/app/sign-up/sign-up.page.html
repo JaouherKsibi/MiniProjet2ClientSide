@@ -1,0 +1,57 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="gotoLogin();">Log in</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h1>Create your<br />Account</h1>
+    <ion-list>
+      <ion-item>
+        <ion-label size="small">First Name</ion-label>
+        <ion-input placeholder="Your Name" size="small" [(ngModel)]="firstName" autocomplete="on" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Last Name:</ion-label>
+        <ion-input type="text" placeholder="enter your last-name please " [(ngModel)]="lastName" autocomplete="on" required >
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Email</ion-label>
+        <ion-input placeholder="Email" [(ngModel)]="email" autocomplete="on" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Password</ion-label>
+        <ion-input type="password" placeholder="Password" [(ngModel)]="password" autocomplete="on" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Reenter Password </ion-label>
+        <ion-input type="password" placeholder="Reenter Password" [(ngModel)]="passwordReenter" autocomplete="on" required></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label>Identity Card Number:</ion-label>
+        <ion-input type="text" placeholder=" identity card number " [(ngModel)]="identityCardNumber" autocomplete="on" required >
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Phone Number:</ion-label>
+        <ion-input type="text" placeholder=" phone number " [(ngModel)]="phoneNumber" autocomplete="on" required>
+        </ion-input>
+      </ion-item>
+      <ion-item lines="none">
+        <label class="myFakeUploadButton" for="myFileInput"><ion-icon name="image-outline" slot="start"></ion-icon >Upload Photo</label>
+        <input type="file" id="myFileInput" #id_f required>
+      </ion-item>
+    </ion-list>
+    
+    
+    
+    <ion-button expand="block" shape="round" (click)="ajouter();">Join Us</ion-button>
+  <p>By pressing 'Join Us' you agree to <br />our terms & conditions.</p>
+</ion-content>

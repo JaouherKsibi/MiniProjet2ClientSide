@@ -1,0 +1,49 @@
+<ion-content>
+  <div class="header">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    <h2>{{user.firstName }} {{user.lastName}}</h2>
+    <div class="space-between">
+      <div class="followings">
+        
+      </div>
+      <div class="followings">
+        
+      </div>
+    </div>
+    <img [src]="imurl">
+  </div>
+  <div class="infos">
+  <ion-card>
+    <ion-list lines="none">
+      <ion-item>
+        <ion-label> </ion-label>
+        <p>{{user.firstName}}</p>
+      </ion-item>
+      <ion-item>
+        <ion-label>lastName</ion-label>
+        <p> {{user.lastName}} </p>
+      </ion-item>
+      <ion-item>
+        <ion-label>Email</ion-label>
+        <p> {{user.email}} </p>
+      </ion-item>
+      <ion-item>
+        <ion-label>password</ion-label>
+        <p>*************</p>
+      </ion-item>
+      <ion-item>
+        <ion-label>identity card number</ion-label>
+        <p> {{user.identityCardNumber}} </p>
+      </ion-item>
+      <ion-item>
+        <ion-label>phone Number</ion-label>
+        <p> {{user.phoneNumber}} </p>
+      </ion-item>
+      
+    </ion-list>
+  </ion-card>
+</div>
+</ion-content>
+

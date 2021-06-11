@@ -1,0 +1,43 @@
+<ion-content>
+  <div class="header">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    <h2>{{user.firstName}}  {{ user.lastName}}</h2>
+    <div class="space-between">
+      <div class="followings">
+        
+      </div>
+      <div class="followings">
+        
+      </div>
+    </div>
+    <img [src]='imurl'>
+  </div>
+  <div class="infos">
+  <ion-card>
+    <ion-list lines="none">
+      <ion-item>
+        <ion-label>firstName</ion-label>
+        <ion-input [(ngModel)]="user.firstName"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>lastName</ion-label>
+        <ion-input [(ngModel)]="user.lastName"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label >identity card number</ion-label>
+        <ion-input [(ngModel)]="user.identityCardNumber"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>phone Number</ion-label>
+        <ion-input [(ngModel)]="user.phoneNumber"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-button (click)="update();" >update </ion-button>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</div>
+</ion-content>
+

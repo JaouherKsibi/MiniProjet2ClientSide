@@ -1,20 +1,42 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content fullscreen class="ion-padding" scroll-y="false">
+  <ion-slides>
+    <ion-slide>
+      <div class="slide">
+        <img src="../../assets/ksibi App louer.png"/>
+        <h2>Bienvenu </h2>
+        
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="slide">
+        <img src="https://previews.123rf.com/images/dolgachov/dolgachov1607/dolgachov160700572/59228152-doute-expression-et-concept-de-personne-homme-qui-r%C3%A9fl%C3%A9chit-sur-fond-de-mur-en-pierre-grise.jpg"/>
+        <h2>Vous etes à la recherche de <b> louer des vetements de haute qualité</b></h2>
+        
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="slide">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlaRXmRKre4atHOgsxgESoemxdDPsCOPI-aLMMRlAdyZFC_apN6rxhdRqXV59I3uiG68o&usqp=CAU"/>
+        
+        <p>vous avez besoin de louer des vêtements à vos enfants ou à vos parents nous avons<b></b> tous les ages </p>
+      </div>
+    </ion-slide>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-slide>
+      <img src="https://static.remove.bg/remove-bg-web/45a72906c90d42939a65e239566fa322bcc1f4f2/assets/start_remove-79a4598a05a77ca999df1dcb434160994b6fde2c3e9101984fb1be0f16d0a74e.png"/>
+      <h2>chez nous </h2>
+      <p><b>vous allez trouver les vetements de femme  et d' homme </b></p>
+    </ion-slide>
+    <ion-slide>
+      <img src="https://cdn.cnt-tech.io/api/v1/tenants/dd1f88aa-e3e2-450c-9fa9-a03ea59a6bf0/domains/57a9d53a-fe30-4b6f-a4de-d624bd25134b/buckets/8f139e2f-9e74-4be3-9d30-d8f180f02fbb/statics/91/91a1e036-9aa1-496f-bcfe-6f9f6dd008ca"/>
+      <h2>Vous avez cherché votre taille et vous l'avez pas trouvé ?</h2>
+      <p>chez nous vous allez trouver toutes les tailles </p>
+    </ion-slide>
+    <ion-slide>
+      <img src="https://montagut.com/18042-large_default/pull-col-tunisien-en-laine-bonno.jpg"/>
+      <h2>Vous voulez commencer?</h2>
+      <ion-button (click)="goToLogin();" fill="clear">Continuer <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+    </ion-slide>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  </ion-slides>
 </ion-content>

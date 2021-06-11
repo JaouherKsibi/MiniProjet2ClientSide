@@ -1,0 +1,22 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="onClick1()">Sign up</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="header">
+    <h1>Login</h1>
+    <img src="../../assets/logo1.png" />
+  </div>
+<div id="form">
+  <ion-input placeholder="Email" [(ngModel)]="email"></ion-input>
+  <ion-input type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+  <ion-button expand="block" shape="round" (click)="onClick2()">Login</ion-button>
+</div>
+</ion-content>

@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      My Rents
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let product of rents1">
+      <ion-card>
+        <ion-item lines="none" style="margin: 0px 0px;">
+              <ion-avatar slot="start">
+                <!--src="https://th.bing.com/th/id/OIP.M9AsZ7Sm6Qq-LXpY92Tt2AHaEK?pid=ImgDet&rs=1"-->
+                <img [src]="product.spLogo|async" alt="non disponible">
+              </ion-avatar>
+              <ion-label>
+                
+                <h3>{{product.storeName}} 's store</h3>
+                <h3>{{product.storeEmail}} </h3>
+              </ion-label>
+            </ion-item>     
+        <ion-card-header> 
+              
+          <ion-card-title>
+            Product Name:{{product.productName}} 
+              
+              
+          </ion-card-title>
+          
+        </ion-card-header>
+        
+        <ion-card-content>
+          <img [src]="product.imagePrduit|async">
+          <p>prix {{product.prixUnitaire}} dt</p>
+          <p>category: {{product.categoryName}} </p>
+          <p>quantite commande: {{product.quantite}} </p>
+          
+          <ion-button color="danger" expand="block" (click)="return1(product);">Return Product</ion-button>
+        </ion-card-content>
+        <!--(click)="allermodif(product)"(click)="delete(product)"-->
+      </ion-card>
+    </ion-item>
+  </ion-list>
+</ion-content>

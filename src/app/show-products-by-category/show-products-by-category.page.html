@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      show Products " {{category.name}} "
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list lines="none">
+    <ion-item *ngFor="let product of listeProducts">
+      <ion-card *ngIf="product.idCategory==category.id"><!--   -->
+        <ion-item lines="none" style="margin: 0px 0px;">
+              <ion-avatar slot="start">
+                <!--src="https://th.bing.com/th/id/OIP.M9AsZ7Sm6Qq-LXpY92Tt2AHaEK?pid=ImgDet&rs=1"-->
+                <img [src]="product.spLogo|async" alt="non disponible">
+              </ion-avatar>
+              <ion-label>
+                
+                <h3>{{product.spStoreName}} 's store</h3>
+                <h3>{{product.spPhoneNumber}} </h3>
+              </ion-label>
+            </ion-item>     
+        <ion-card-header> 
+              
+          <ion-card-title>
+            Product Name:{{product.name}} 
+              
+              
+          </ion-card-title>
+          
+        </ion-card-header>
+        
+        <ion-card-content>
+          <img [src]="product.imageProduit|async">
+          <p>prix {{product.prix}} dt</p>
+          <p>category: {{product.categoryName}} </p>
+          <p>quantite: {{product.quantite}} </p>
+          <select name="qtite" id="qtite" *ngIf="product.quantite>0" [(ngModel)]="quantiteCommande">
+            <option value="{{i1}}" *ngFor="let i1 of product.listI">{{i1}}</option>
+          </select>
+          <ion-button color="danger" expand="block" *ngIf="!(product.quantite>0)">En Repture</ion-button>
+          <ion-button color="success" slot="start" *ngIf="product.quantite>0" (click)="rent(product);" >Rent</ion-button>
+          <ion-button color="warning" slot="end" (click)="gotoShowProductDetails(product)">show details</ion-button>
+        </ion-card-content>
+        <!--(click)="allermodif(product)"(click)="delete(product)"-->
+      </ion-card>
+    </ion-item>
+  </ion-list>
+</ion-content>

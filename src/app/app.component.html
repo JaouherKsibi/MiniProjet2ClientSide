@@ -1,3 +1,71 @@
 <ion-app>
+  <ion-menu menuId="main-menu" content-id="main1" > 
+    <ion-content>
+      <ion-list>
+        <ion-item><img src="../assets/ksibi App louer.png" alt="ion" ></ion-item>
+      </ion-list>
+      <ion-list>
+        <ion-list-header>
+          Navigate
+        </ion-list-header>
+        <ion-item>
+          <ion-icon name="settings-outline" slot="start"></ion-icon>
+          <ion-button  color="dark" size="default" fill="clear" expand="full" (click)="resetPassword();">
+            reset Password
+          </ion-button>
+        </ion-item>
+        
+        <ion-item>
+          <ion-icon name="settings-outline" slot="start"></ion-icon>
+          <ion-button (click)="goToUpdateClient();"  color="dark" size="default" fill="clear" expand="full">
+            Update Client 
+          </ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-icon slot="start" name='home'></ion-icon>
+          <ion-button  (click)="goHomeClient();" color="dark" size="default" fill="clear" expand="full">Home</ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="eye-outline" slot="start"></ion-icon>
+          <ion-button (click)="seePersonalInfos();" color="dark" size="default" fill="clear" expand="full">
+            Personal information
+          </ion-button>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        <ion-list-header>
+          Categories
+        </ion-list-header>
+        <ion-item *ngFor="let lv of listeCategories|async"  >
+          <ion-item (click)="gotoCategory1(lv);">
+          <ion-icon name="shirt-outline"></ion-icon>
+          <ion-label>
+            {{lv.name}}
+          </ion-label></ion-item>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        <ion-list-header>
+          products management
+        </ion-list-header>
+        <ion-item>
+          <ion-icon name="add-circle-outline"></ion-icon>
+          <ion-button (click)="goToMyRents();" color="dark" size="default" fill="clear" expand="full">
+            My rents
+          </ion-button>
+        </ion-item>
+      </ion-list>
+      <ion-list>
+        <ion-item>
+          <ion-icon name="log-out-outline"></ion-icon>
+          <ion-button color="dark" size="default" fill="clear" expand="full" (click)="logout()">
+            logout
+          </ion-button>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+      
+  </ion-menu>
+  <ion-router-outlet id="main1"></ion-router-outlet>
   <ion-router-outlet></ion-router-outlet>
 </ion-app>

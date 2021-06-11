@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Show Product Informations</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-card >
+      <ion-card-header>
+        <ion-card-title>Service ProviderInformations :</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <img [src]="product.spLogo|async" alt="non disponible">
+        <ion-list>
+          <ion-item>
+            <ion-label>Store Name :</ion-label>
+            <ion-item>{{product.spStoreName}}</ion-item>
+          </ion-item>
+          <ion-item>
+            <ion-label>Store Id :</ion-label>
+            <ion-item>{{product.spIdentifier}}</ion-item>
+          </ion-item>
+          <ion-item>
+            <ion-label>Email :</ion-label>
+            <ion-item>{{product.spEmail}}</ion-item>
+          </ion-item>
+          <ion-item>
+            <ion-label>Phone Number :</ion-label>
+            <ion-item>{{product.spPhoneNumber}}</ion-item>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+      
+    </ion-card>
+    <ion-card >
+      <ion-card-header>
+        <ion-card-title>Category Informations :</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <img [src]="product.categoryImage|async" alt="non disponible">
+        <ion-list>
+          <ion-item>
+            <ion-label>Category Name :</ion-label>
+            <ion-item line="none">{{product.categoryName}}</ion-item>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+      
+    </ion-card>
+    <ion-card >
+      <ion-card-header>
+        <ion-card-title>Product Informations :</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <img [src]="product.imageProduit|async" alt="non disponible">
+        <ion-list>
+          <ion-item>
+            <ion-label>Product Name :</ion-label>
+            <ion-item line="none">{{product.name}}</ion-item>
+          </ion-item>
+          <ion-item>
+            <ion-label>Product Id :</ion-label>
+            <ion-item line="none">{{product.id}}</ion-item>
+          </ion-item>
+          <ion-item>
+            <ion-label>Product Price :</ion-label>
+            <ion-item line="none">{{product.prix}}</ion-item>
+          </ion-item>
+        </ion-list>
+        
+      </ion-card-content>
+      
+    </ion-card>
+
+  
+
+    <ion-list>
+      <ion-item>
+        
+        <select name="qtite" id="qtite"  [(ngModel)]="quantiteCommande" *ngIf="product.quantite>0">
+          <option value="{{i1}}" *ngFor="let i1 of listI">{{i1}}</option>
+        </select>
+         <ion-button color="success" slot="start" *ngIf="product.quantite>0" (click)="rent()">Rent</ion-button><!--*ngIf="product.quantite>0"-->
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
