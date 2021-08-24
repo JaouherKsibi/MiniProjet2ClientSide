@@ -47,7 +47,7 @@ export class SignUpPage implements OnInit {
           if ({firstName:this.firstName ,lastName:this.lastName ,email : this.email , password : this.password , phoneNumber:this.phoneNumber , identityCardNumber:this.identityCardNumber}) {
             this.test = true;
             //console.log("yezzi bla la3b w zid compte jdid");
-            this.route.navigateByUrl("/sign-in-client");
+            this.route.navigateByUrl("/login");
             return;
             //this.presentAlert();
           }
@@ -57,7 +57,7 @@ export class SignUpPage implements OnInit {
   }
   lien(){
     if (this.test == true) {
-      this.route.navigateByUrl("/sign-in-client");
+      this.route.navigateByUrl("/login");
     } else {
       //this.route.navigateByUrl("/sign-up-client");
       console.log("errrrrrrrrrreeeer !!!!!! ")
@@ -125,7 +125,7 @@ export class SignUpPage implements OnInit {
             role: 'cancel',
             cssClass: 'secondary',
             handler: (blah) => {
-              this.route.navigateByUrl("/sign-up-client");
+              this.route.navigateByUrl("/sign-up");
             }
           }]
         });
@@ -145,7 +145,7 @@ export class SignUpPage implements OnInit {
             role: 'cancel',
             cssClass: 'secondary',
             handler: (blah) => {
-              this.route.navigateByUrl("/sign-up-client");
+              this.route.navigateByUrl("/sign-up");
             }
           }]
         });
@@ -182,7 +182,7 @@ export class SignUpPage implements OnInit {
             role: 'cancel',
             cssClass: 'secondary',
             handler: (blah) => {
-              this.route.navigateByUrl("/sign-in-client");
+              this.route.navigateByUrl("/login");
             }
           }]
         });
@@ -192,7 +192,7 @@ export class SignUpPage implements OnInit {
       }
       /********************************fin alertes***************************************** */
       gotoLogin(){
-        this.route.navigateByUrl("/sign-in-client")
+        this.route.navigateByUrl("/login")
       }
   ngOnInit() {
   }

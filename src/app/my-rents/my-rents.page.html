@@ -14,7 +14,7 @@
       <ion-card>
         <ion-item lines="none" style="margin: 0px 0px;">
               <ion-avatar slot="start">
-                <!--src="https://th.bing.com/th/id/OIP.M9AsZ7Sm6Qq-LXpY92Tt2AHaEK?pid=ImgDet&rs=1"-->
+                
                 <img [src]="product.spLogo|async" alt="non disponible">
               </ion-avatar>
               <ion-label>
@@ -34,7 +34,7 @@
         </ion-card-header>
         
         <ion-card-content>
-          <img [src]="product.imagePrduit|async">
+          <img [src]="product.imagePrduit|async" alt="le">
           <p>prix {{product.prixUnitaire}} dt</p>
           <p>category: {{product.categoryName}} </p>
           <p>quantite commande: {{product.quantite}} </p>
